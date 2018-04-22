@@ -1,0 +1,259 @@
+/* para todo el contenido */
+body{
+	font-family: 'Dancing Script', cursive; /* tipo fuente */
+	background: #02010a; /* fondo */
+}
+
+header{
+  box-sizing: border-box;
+	background: #5b7989;
+	border-radius: 10px 10px 0px 0px; /* borde superior */
+	-moz-border-radius: 10px 10px 0px 0px; /* borde superior para FireFox */
+	-webkit-border-radius: 10px 10px 0px 0px; /* borde superior para Opera */
+	width: 100%;
+	float:left;
+}
+
+section{
+	box-sizing: border-box;
+	float:left;
+	text-align: center;
+	width: 100%;
+}
+
+section img{
+	-webkit-box-shadow:2px 2px 2px  #02010a;
+	-moz-box-shadow:2px 2px 2px  #02010a;
+	box-shadow:2px 2px 2px #02010a;
+}
+
+footer{
+	background: #C6d5c5;
+	border-radius: 0px 0px 10px 10px; /* borde superior */
+	-moz-border-radius: 0px 0px 10px 10px; /* borde superior para FireFox */
+	-webkit-border-radius: 0px 0px 10px 10px; /* borde superior para Opera */
+
+	box-sizing: border-box;
+	float:left;
+	width: 100%;
+	display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+}
+footer h1 {font-size: 25px; margin-top: 10px;}
+
+#contenido{
+	margin:0px auto 0px auto;
+	max-width: 900px;
+	-moz-animation: slidein 1.2s 1;
+	-webkit-animation: slidein 1.2s 1;
+  animation: slidein 1.2s 1;
+}
+#titulo{
+  color: white;
+  text-shadow: 2px 2px #02010a;
+  margin-left: 15px;
+  float: left;
+}
+#navegador{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 10px;
+	float: right;
+}
+#navegador a {
+  color: white;
+  font-size: 20px;
+}
+#navegador div{
+  margin: 10px;
+  display: inline-block;
+}
+
+.sliderup {
+	overflow-y: hidden;
+	max-height: 500px; /* approximate max height */
+
+	transition-property: all;
+	transition-duration: .5s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+.active a {
+  text-decoration: none;
+}
+
+.galeria{
+	background: #d5c75f;
+	display: flex;
+	flex-wrap: wrap;
+}
+.elemento {
+	width: 33.3%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.galeria img{
+	width: 85%;
+}
+
+.detalle{
+	width: 25%;
+	margin: 20px;
+	font-weight: bold;
+	font-size: 15px;
+	text-align: left;
+}
+.redes{
+	margin-top: -10px;
+}
+.redes img{
+	vertical-align: middle;
+	width: 18px;
+}
+
+.efectoblur{
+	 filter: blur(10px);
+}
+.efectogris{
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	filter: grayscale(100%);
+}
+.efectosepia{
+	filter: sepia(90%);
+}
+@-moz-keyframes slidein {
+	0%   {margin-top: 150%;}
+	60%  {margin-top: -5%;}
+	100% {margin-top: 0%;}
+}
+@-webkit-keyframes slidein {
+	0%   {margin-top: 150%;}
+	60%  {margin-top: -5%;}
+	100% {margin-top: 0%;}
+}
+@keyframes slidein {
+	0%   {margin-top: 150%;}
+	60%  {margin-top: -5%;}
+	100% {margin-top: 0%;}
+}
+
+@media all and (max-width: 900px) and (min-width:700px) {
+	#titulo{
+	  color: white;
+	  text-shadow: 2px 2px #02010a;
+	  margin-left: 15px;
+	  float: left;
+	}
+	#navegador{
+	  margin-top: 20px;
+	  margin-bottom: 20px;
+	  margin-right: 10px;
+		float: right;
+	}
+	#navegador div{
+	  margin: 10px;
+	  display: inline-block;
+	}
+
+	.elemento {
+		width: 33.3%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	.contenido{
+		box-sizing: border-box;
+		float:left;
+		text-align: center;
+		width: 100%;
+	}
+	.detalle{
+		width: 25%;
+	}
+}
+@media all and (max-width: 700px) and (min-width:480px) {
+	footer{
+		display: block;
+	}
+	#titulo{
+	  color: white;
+	  text-shadow: 2px 2px #02010a;
+	  margin-left: auto;
+	  float: none;
+		text-align: center;
+	}
+	#navegador{
+	  margin-top: auto;
+	  margin-bottom: auto;
+	  margin-right: auto;
+		float: none;
+		text-align: center;
+	}
+	#navegador div{
+	  margin: 10px;
+	  display: inline-block;
+	}
+	.elemento {
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.contenido{
+		box-sizing: border-box;
+		float:left;
+		text-align: center;
+		width: 100%;
+	}
+	.detalle{
+		width: 100%;
+	}
+
+}
+@media all and (max-width: 480px) {
+	footer{
+		display: block;
+	}
+
+	#titulo{
+	  color: white;
+	  text-shadow: 2px 2px #02010a;
+	  margin-left: auto;
+	  float: none;
+		text-align: center;
+	}
+	#navegador{
+	  margin-top: auto;
+	  margin-bottom: auto;
+	  margin-right: auto;
+		float: none;
+		text-align: center;
+	}
+	#navegador div{
+	  margin: 10px;
+	  display: inline-block;
+	}
+	.elemento {
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+	.contenido{
+		box-sizing: border-box;
+		float: left;
+		text-align: center;
+		width: 100%;
+	}
+	.detalle{
+		width: 100%;
+	}
+}
